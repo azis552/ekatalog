@@ -45,4 +45,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function berkas()
+    {
+        return $this->hasOne(BerkasPenjual::class);
+    }
+
+    public function pemerintah()
+    {
+        return $this->hasOne(InstansiPemerintah::class);
+    }
 }
